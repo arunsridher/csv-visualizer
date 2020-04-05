@@ -100,16 +100,17 @@ function updateTableData(table, data){
 }
 
 function sort(key){
-  
+  // get table
   var table = $('#data-table');
-
+  // get current table data
   let data = getTableData(table);
-  
+  // sort the data
   data = sortData(data, key);
-
+  // update the table
   updateTableData(table, data);
 }
 
+//sort the data based on the key value
 function sortData(data, key){
   console.log(key);
   data.sort(function(a, b){
