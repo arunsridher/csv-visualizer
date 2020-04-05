@@ -1,14 +1,14 @@
 # CSV Visualizer
 
 ## Requirements
-[Requirements] (https://docs.google.com/document/d/1KWB-QdoYlRLwPZ2kHYNt_XL1ZCX5r_GJUUETLZvw-qI/edit#)
+You can find the task requirements [here]: https://docs.google.com/document/d/1KWB-QdoYlRLwPZ2kHYNt_XL1ZCX5r_GJUUETLZvw-qI
 
 ## Prerequisites
   * Node
   * MongoDB
 
 ## Set up and execution  
-  1. Clone the repository from [here] (https://github.com/arunsridher/polling-system.git)
+  1. Clone the repository from [here](https://github.com/arunsridher/polling-system.git)
   2. Move to the cloned folder
   3. Install the necessary dependencies 
   4. Run the application using the command "npm start"
