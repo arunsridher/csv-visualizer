@@ -22,7 +22,6 @@ $('.search').each(function() {
 
       //find the table using id
       var table = $('#data-table');
-
       //get table data if if table data is empty
       if(tableData === undefined)
         tableData = getTableData(table);
@@ -65,7 +64,7 @@ function getFilteredTableData(tableData, query) {
 }
 
 // loop through the table and push the data into an array
-function getTableData(table, query) {
+function getTableData(table) {
   let data = [];
   table.find('tr').each(function (rowIndex, r) {
       var cols = [];
@@ -98,4 +97,27 @@ function updateTableData(table, data){
 
   //append newly created tbody element
   table.append(html);
+}
+
+function sort(key){
+  
+  var table = $('#data-table');
+
+  let data = getTableData(table);
+  
+  data = sortData(data, key);
+
+  updateTableData(table, data);
+}
+
+function sortData(data, key){
+  console.log(key);
+  data.sort(function(a, b){
+    if(a[key] < b[key])
+      return -1;
+    if(b[key] < a[key])
+      return 1;
+    return 0;
+  });
+  return data;
 }
