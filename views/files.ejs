@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>
+      <%= title %>
+    </title>
+  </head>
+  <body>
+    <h1>Files</h1>
+    <% if(files) { %>
+      <div id = "files">
+        <% for(file of files){%>
+          <p>
+              <a href="/uploads/<%= file.path %>"><%= file.name %></a>
+          </p>
+        <% } %> 
+      </div>
+    <% } %>
+  </body>
+</html>
