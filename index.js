@@ -1,6 +1,9 @@
 //include express
 const express = require('express');
 
+//include express layouts
+const expressLayouts = require('express-ejs-layouts');
+
 //server port number
 const port = 8000;
 
@@ -17,12 +20,18 @@ const app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
+//set assets path
+app.use(express.static('./assets'));
+
 //make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname + "/uploads"));
 
-
+//set view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+//use express layouts
+app.use(expressLayouts);
 
 //redirect all urls to routes index.js
 app.use('/', require('./routes'));

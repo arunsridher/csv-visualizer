@@ -1,0 +1,26 @@
+table{
+  width: 80%;
+  margin: auto;
+}
+
+caption{
+  color: #BE3144;
+  font-size: 36px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px 0 20px;
+}
+
+th{
+  color: #45567D;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+td{
+  color: #303841;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}

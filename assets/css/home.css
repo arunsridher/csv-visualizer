@@ -1,0 +1,24 @@
+form{
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+input[type="file"]{
+  display: block;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: #F0F0F0;
+}
+
+input[type="submit"]{
+  padding: 5px 15px;
+  color: #BE3144;
+  font-weight: bold;
+}

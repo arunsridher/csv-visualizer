@@ -1,0 +1,23 @@
+<header>
+  <div id="logo">
+    <a href="/">
+      CSV Visualizer
+    </a>
+  </div>
+  <% if(locals.path){ %>
+    <div>
+      <ul id = "nav">
+        <% if(path == "visualizer") { %>
+          <li><a href="/files/">Back</a></li>
+          <li><a href="/">Upload New File</a></li>
+        <% } %>
+        <% if(path == "files") { %>
+          <li><a href="/">Back</a></li>
+        <% } %>
+        <% if(path == "home") { %>
+          <li><a href="/files">View all Files</a></li>
+        <% } %>
+      </ul>
+    </div>
+  <% } %>
+</header>

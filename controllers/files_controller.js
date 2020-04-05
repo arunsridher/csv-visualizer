@@ -16,11 +16,13 @@ module.exports.uploadFile = async function(req, res){
       });
     }
     return res.render('home',{
+      path: "home",
       title: "Home | CSV Visualizer",
       message: "File uploaded successfuly"
     });
   }catch(err){
     return res.render('home',{
+      path: "home",
       title: "Home | CSV Visualizer",
       message: "File upload failed"
     });
@@ -32,6 +34,7 @@ module.exports.displayAllFiles = async function(req, res){
     let allFiles = await Files.find({});
     return res.render('files',{
       title: "All Files",
+      path: "files",
       files: allFiles
     });
   }catch(err){
@@ -56,6 +59,8 @@ module.exports.openFile = async function(req, res){
     // console.log(keys);
 
     return res.render('visualizer', {
+      title: "Visualizer",
+      path: "visualizer",
       name: fileObj.name,
       jsonArray: jsonArray
     });
