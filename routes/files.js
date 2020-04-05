@@ -29,5 +29,7 @@ const filesController = require('../controllers/files_controller');
 
 router.post('/upload',upload.single('csvfile'), filesController.uploadFile);
 router.get('/', filesController.displayAllFiles);
+router.get('/:id/view', filesController.openFile);
+
 //export router
 module.exports = router;

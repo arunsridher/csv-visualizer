@@ -1,0 +1,32 @@
+<header>
+  <a href="/files">Back</a>
+  <a href="/">Upload new file</a>
+</header>
+<div id="data-table">
+  <% if(jsonArray && jsonArray.length > 0) { 
+    let keys = Object.keys(jsonArray[0]); %>
+    <table>
+      <caption><%= name %></caption>
+      <thead>
+        <tr>
+          <% for(key of keys){ %>
+            <th>
+              <%= key %>
+            </th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(jsonObj of jsonArray){ %>
+          <tr>
+            <% for (key in jsonObj) { %>
+              <td>
+                <%= jsonObj[key] %>
+              </td>
+            <% } %>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  <% }%>
+</div>

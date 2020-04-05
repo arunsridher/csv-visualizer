@@ -10,6 +10,9 @@
       <input type="file" name="csvfile" accept=".csv, text/csv"  placeholder="select the csv file">
       <input type="submit" value="Upload">
     </form>
+    <% if(locals.message) { %>
+      <p><%=message%></p>
+    <% } %>
     <br />
     <div id="view-files">
       <a href="/files">View Files</a>

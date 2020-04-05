@@ -5,12 +5,15 @@
     </title>
   </head>
   <body>
+    <header>
+      <a href="/">Back</a>
+    </header>
     <h1>Files</h1>
     <% if(files) { %>
       <div id = "files">
         <% for(file of files){%>
           <p>
-              <a href="/uploads/<%= file.path %>"><%= file.name %></a>
+              <a href="/files/<%= file.id %>/view"><%= file.name %></a>
           </p>
         <% } %> 
       </div>
