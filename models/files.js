@@ -1,5 +1,7 @@
+//include mongoose
 var mongoose = require('mongoose');
 
+//create file schema
 const filesSchema = new mongoose.Schema({
   path: {
     type: String,
@@ -13,5 +15,8 @@ const filesSchema = new mongoose.Schema({
   timestamps: true
 });
 
+//create files model
 const Files = mongoose.model('Files', filesSchema);
+
+//export the model
 module.exports = Files;

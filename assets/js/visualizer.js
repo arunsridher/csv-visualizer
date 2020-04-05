@@ -43,6 +43,12 @@ function getFilteredTableData(tableData, query) {
   let data = [];
   for(let i = 0; i < tableData.length; i++){
     let row = tableData[i];
+
+    // if(row[1].toLowerCase().includes(query))
+    //   data.push(row);
+
+    // to search the entire document for the query string
+    // we include the row even if one column value matches the query string  
     let found = false;
     for(let j = 0; j < row.length; j++){
       if(row[j].toLowerCase().includes(query)){
@@ -53,6 +59,7 @@ function getFilteredTableData(tableData, query) {
     
     if(found)
       data.push(row);
+  
   }
   return data;
 }

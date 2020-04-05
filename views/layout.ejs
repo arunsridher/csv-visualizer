@@ -1,8 +1,11 @@
+<!-- common layout for all ejs files -->
 <html>
   <head>
     <title>
       <%= title %>
     </title>
+
+    <!-- style sheets -->
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/files.css">
@@ -10,9 +13,14 @@
     <link rel="stylesheet" href="/css/visualizer.css">
   </head>
   <body>
+    <!-- header content gets rendered here -->
     <%- include('_header'); %>
+
+    <!-- body content of all ejs files -->
     <%- body %>
   </body>
+
+  <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="/js/visualizer.js"></script>
 </html>
